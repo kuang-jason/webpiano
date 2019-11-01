@@ -13,7 +13,7 @@ const A4 = new Audio("sounds/A4.wav");
 const Bb4 = new Audio("sounds/Bb4.wav");
 const B4 = new Audio("sounds/B4.wav");
 
-const playKey = audio => {
+const keySound = audio => {
   const clone = audio.cloneNode();
   clone.play();
   setTimeout(() => (clone.volume = 0.8), 400);
@@ -22,3 +22,21 @@ const playKey = audio => {
   setTimeout(() => (clone.volume = 0.2), 1600);
   setTimeout(() => (clone.volume = 0), 2000);
 };
+
+/** C4 KEY **/
+const C4key = document.querySelector(".C4-key");
+const playC4 = () => {
+  keySound(C4);
+  C4key.classList.add("active");
+  setTimeout(() => C4key.classList.remove("active"), 200);
+};
+C4key.addEventListener("click", playC4);
+
+/** Db4 KEY **/
+const Db4key = document.querySelector(".Db4-key");
+const playDb4 = () => {
+  keySound(Db4);
+  Db4key.classList.add("active");
+  setTimeout(() => Db4key.classList.remove("active"), 200);
+};
+Db4key.addEventListener("click", playDb4);
