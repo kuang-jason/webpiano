@@ -130,3 +130,42 @@ const playB4 = () => {
   setTimeout(() => B4key.classList.remove("active"), 200);
 };
 B4key.addEventListener("click", playB4);
+
+/** Piano Keys - Shortcuts **/
+window.addEventListener("keydown", ({ keyCode }) => {
+  // press Q
+  if (keyCode === 81) return playC4();
+
+  // press 2
+  if (keyCode === 50) return playDb4();
+
+  // press W
+  if (keyCode === 87) return playD4();
+
+  // press 3
+  if (keyCode === 51) return playEb4();
+
+  // press E
+  if (keyCode === 69) return playE4();
+
+  // press R
+  if (keyCode === 82) return playF4();
+
+  // press 5
+  if (keyCode === 53) return playGb4();
+
+  // press T
+  if (keyCode === 84) return playG4();
+
+  // press 6
+  if (keyCode === 54) return playAb4();
+
+  // press Y
+  if (keyCode === 89) return playA4();
+
+  // press 7
+  if (keyCode === 55) return playBb4();
+
+  // press U
+  if (keyCode === 85) return playB4();
+});
