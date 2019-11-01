@@ -7,9 +7,66 @@
   user-select: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  background-image: linear-gradient(to right, red, orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*###################### PIANO INTERFACE ######################*/
+
+.piano {
+  display: flex;
+  position: relative;
+}
+
+.white-key {
+  width: 80px;
+  height: 240px;
+  background-color: #fff;
+  margin-left: -8px;
+  border: 4px solid #000;
+  border-radius: 0 0 8px 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.black-key {
+  position: absolute;
+  width: 48px;
+  height: 160px;
+  background-image: linear-gradient(#000000, #000000);
+  border: 4px solid #000;
+  border-radius: 0 0 8px 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.Db4-key {
+  left: 44px;
+}
+
+.Eb4-key {
+  left: 116px;
+}
+
+.Gb4-key {
+  left: 260px;
+}
+
+.Ab4-key {
+  left: 332px;
+}
+
+.Bb4-key {
+  left: 404px;
 }
