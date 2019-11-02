@@ -60,6 +60,18 @@ body {
   background: #101010;
 }
 
+.shortcut-white {
+  color: #000;
+  font-size: 1.25rem;
+  margin-top: 200px;
+}
+
+.shortcut-black {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-top: 120px;
+}
+
 .shortcut-btn {
   margin-top: 30px;
   padding: 1rem 1rem;
