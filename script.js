@@ -169,3 +169,15 @@ window.addEventListener("keydown", ({ keyCode }) => {
   // press U
   if (keyCode === 85) return playB4();
 });
+
+// changes shortcut btn to "hide shortcuts" after click
+function shortcutToggle(e) {
+  // toggle .hide class
+  document.querySelector(".shortcut-btn").classList.toggle("hide");
+  e.target.textContent == "show keyboard shortcuts"
+    ? (e.target.textContent = "hide keyboard shortcuts")
+    : (e.target.textContent = "show keyboard shortcuts");
+}
+
+var shortcutBtn = document.querySelector(".shortcut-btn");
+shortcutBtn.addEventListener("mousedown", shortcutToggle);
