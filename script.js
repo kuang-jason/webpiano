@@ -170,8 +170,8 @@ window.addEventListener("keydown", ({ keyCode }) => {
   if (keyCode === 85) return playB4();
 });
 
-// changes shortcut btn to "hide shortcuts" after click
-function shortcutToggle(e) {
+/** [SHOW / HIDE] SHORTCUT BTN TOGGLE **/
+function shortcutBtnToggle(e) {
   // toggle .hide class
   document.querySelector(".shortcut-btn").classList.toggle("hide");
   e.target.textContent == "show keyboard shortcuts"
@@ -179,5 +179,19 @@ function shortcutToggle(e) {
     : (e.target.textContent = "show keyboard shortcuts");
 }
 
+function shortcutKeys(e) {
+  var whiteKeys = document.querySelectorAll(".shortcut-white");
+  var blackKeys = document.querySelectorAll(".shortcut-black");
+  for (var i = 0; i < whiteKeys.length; i++) {
+    whiteKeys[i].classList.add("active");
+  }
+  for (var i = 0; i < blackKeys.length; i++) {
+    blackKeys[i].classList.add("active");
+  }
+}
+
+/** SHORTCUT VARIABLE & LISTENERS **/
 var shortcutBtn = document.querySelector(".shortcut-btn");
-shortcutBtn.addEventListener("mousedown", shortcutToggle);
+shortcutBtn.addEventListener("mousedown", shortcutBtnToggle);
+shortcutBtn.addEventListener("mousedown", shortcutKeys);
+shortcutBtn.addEventListener("mousedown", removeKeys);
