@@ -170,28 +170,18 @@ window.addEventListener("keydown", ({ keyCode }) => {
   if (keyCode === 85) return playB4();
 });
 
-/** [SHOW / HIDE] SHORTCUT BTN TOGGLE **/
-function shortcutBtnToggle(e) {
-  // toggle .hide class
-  document.querySelector(".shortcut-btn").classList.toggle("hide");
-  e.target.textContent == "show keyboard shortcuts"
-    ? (e.target.textContent = "hide keyboard shortcuts")
-    : (e.target.textContent = "show keyboard shortcuts");
-}
-
-function shortcutKeys(e) {
-  var whiteKeys = document.querySelectorAll(".shortcut-white");
-  var blackKeys = document.querySelectorAll(".shortcut-black");
-  for (var i = 0; i < whiteKeys.length; i++) {
-    whiteKeys[i].classList.add("active");
-  }
-  for (var i = 0; i < blackKeys.length; i++) {
-    blackKeys[i].classList.add("active");
-  }
-}
-
 /** SHORTCUT VARIABLE & LISTENERS **/
-var shortcutBtn = document.querySelector(".shortcut-btn");
-shortcutBtn.addEventListener("mousedown", shortcutBtnToggle);
-shortcutBtn.addEventListener("mousedown", shortcutKeys);
-shortcutBtn.addEventListener("mousedown", removeKeys);
+var showShortcutBtn = document.getElementById("show-shortcut-btn");
+var hideShortcutBtn = document.getElementById("hide-shortcut-btn");
+var whiteKeys = document.querySelectorAll(".shortcut-white");
+var blackKeys = document.querySelectorAll(".shortcut-black");
+
+showShortcutBtn.addEventListener("click", () => {
+  showShortcutBtn.style.visibility = "hidden";
+  hideShortcutBtn.style.visibility = "visible";
+});
+
+hideShortcutBtn.addEventListener("click", () => {
+  hideShortcutBtn.style.visibility = "hidden";
+  showShortcutBtn.style.visibility = "visible";
+});
