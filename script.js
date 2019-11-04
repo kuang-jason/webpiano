@@ -170,6 +170,26 @@ window.addEventListener("keydown", ({ keyCode }) => {
   if (keyCode === 85) return playB4();
 });
 
+/** SHORTCUT KEYS TOGGLE ON / OFF **/
+
+function shortcutKeysOn(e) {
+  for (var i = 0; i < whiteKeys.length; i++) {
+    whiteKeys[i].style.visibility = "visible";
+  }
+  for (var j = 0; j < blackKeys.length; j++) {
+    blackKeys[j].style.visibility = "visible";
+  }
+}
+
+function shortcutKeysOff(e) {
+  for (var i = 0; i < whiteKeys.length; i++) {
+    whiteKeys[i].style.visibility = "hidden";
+  }
+  for (var j = 0; j < blackKeys.length; j++) {
+    blackKeys[j].style.visibility = "hidden";
+  }
+}
+
 /** SHORTCUT VARIABLE & LISTENERS **/
 var showShortcutBtn = document.getElementById("show-shortcut-btn");
 var hideShortcutBtn = document.getElementById("hide-shortcut-btn");
@@ -185,3 +205,6 @@ hideShortcutBtn.addEventListener("click", () => {
   hideShortcutBtn.style.visibility = "hidden";
   showShortcutBtn.style.visibility = "visible";
 });
+
+showShortcutBtn.addEventListener("click", shortcutKeysOn);
+hideShortcutBtn.addEventListener("click", shortcutKeysOff);
