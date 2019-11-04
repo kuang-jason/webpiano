@@ -17,6 +17,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to right, red, orange);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +27,16 @@ body {
 
 button:focus {
   outline: 0;
+}
+
+@viewport {
+  zoom: 1;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  zoom: 1;
+  width: extend-to-zoom;
 }
 
 /*###################### PIANO INTERFACE ######################*/
@@ -125,21 +137,307 @@ button:focus {
 }
 
 .Db4-key {
-  left: 44px;
+  left: 42px;
 }
 
 .Eb4-key {
-  left: 116px;
+  left: 114px;
 }
 
 .Gb4-key {
-  left: 260px;
+  left: 258px;
 }
 
 .Ab4-key {
-  left: 332px;
+  left: 330px;
 }
 
 .Bb4-key {
   left: 404px;
+}
+
+/*###################### MOBILE DEVICE QUERIES ######################*/
+
+/*########## MOBILE PHONES ##########*/
+@media only screen and (min-device-width: 361px) and (max-device-width: 480px) and (orientation: portrait) {
+  .piano {
+    margin-left: 7px;
+    margin-top: 80px;
+  }
+  .white-key {
+    width: 60px;
+    height: 180px;
+  }
+  .black-key {
+    width: 36px;
+    height: 120px;
+  }
+
+  .Db4-key {
+    left: 29px;
+  }
+
+  .Eb4-key {
+    left: 81px;
+  }
+
+  .Gb4-key {
+    left: 184px;
+  }
+
+  .Ab4-key {
+    left: 237px;
+  }
+
+  .Bb4-key {
+    left: 288px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 823px) and (orientation: landscape) {
+  .piano {
+    margin-left: 7px;
+    margin-top: 80px;
+  }
+  .white-key {
+    width: 70px;
+    height: 210px;
+  }
+  .black-key {
+    width: 44px;
+    height: 145px;
+  }
+
+  .Db4-key {
+    left: 34px;
+  }
+
+  .Eb4-key {
+    left: 97px;
+  }
+
+  .Gb4-key {
+    left: 220px;
+  }
+
+  .Ab4-key {
+    left: 282px;
+  }
+
+  .Bb4-key {
+    left: 345px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+
+/*########## IPHONE 5 & GALAXY S5 ##########*/
+
+@media only screen and (max-device-width: 360px) and (orientation: portrait) {
+  .piano {
+    margin-left: 7px;
+    margin-top: 80px;
+  }
+
+  .white-key {
+    width: 50px;
+    height: 150px;
+  }
+
+  .black-key {
+    width: 32px;
+    height: 100px;
+  }
+
+  .Db4-key {
+    left: 20px;
+  }
+
+  .Eb4-key {
+    left: 62px;
+  }
+
+  .Gb4-key {
+    left: 146px;
+  }
+
+  .Ab4-key {
+    left: 188px;
+  }
+
+  .Bb4-key {
+    left: 230px;
+  }
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+
+/*########## IPAD & IPAD PRO ##########*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .piano {
+    margin-left: 10px;
+    margin-top: 75px;
+  }
+
+  .white-key {
+    width: 100px;
+    height: 300px;
+  }
+
+  .black-key {
+    width: 64px;
+    height: 200px;
+  }
+
+  .Db4-key {
+    left: 55px;
+  }
+
+  .Eb4-key {
+    left: 146px;
+  }
+
+  .Gb4-key {
+    left: 330px;
+  }
+
+  .Ab4-key {
+    left: 424px;
+  }
+
+  .Bb4-key {
+    left: 516px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .piano {
+    margin-left: 10px;
+    margin-top: 125px;
+  }
+
+  .white-key {
+    width: 120px;
+    height: 360px;
+  }
+
+  .black-key {
+    width: 72px;
+    height: 260px;
+  }
+
+  .Db4-key {
+    left: 72px;
+  }
+
+  .Eb4-key {
+    left: 184px;
+  }
+
+  .Gb4-key {
+    left: 406px;
+  }
+
+  .Ab4-key {
+    left: 518px;
+  }
+
+  .Bb4-key {
+    left: 630px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+  .piano {
+    margin-left: 10px;
+    margin-top: 75px;
+  }
+
+  .white-key {
+    width: 120px;
+    height: 360px;
+  }
+
+  .black-key {
+    width: 72px;
+    height: 260px;
+  }
+
+  .Db4-key {
+    left: 72px;
+  }
+
+  .Eb4-key {
+    left: 184px;
+  }
+
+  .Gb4-key {
+    left: 406px;
+  }
+
+  .Ab4-key {
+    left: 518px;
+  }
+
+  .Bb4-key {
+    left: 630px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
+}
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation: landscape) {
+  .piano {
+    margin-left: 10px;
+    margin-top: 125px;
+  }
+
+  .white-key {
+    width: 160px;
+    height: 480px;
+  }
+
+  .black-key {
+    width: 96px;
+    height: 320px;
+  }
+
+  .Db4-key {
+    left: 96px;
+  }
+
+  .Eb4-key {
+    left: 250px;
+  }
+
+  .Gb4-key {
+    left: 552px;
+  }
+
+  .Ab4-key {
+    left: 704px;
+  }
+
+  .Bb4-key {
+    left: 856px;
+  }
+
+  #show-shortcut-btn {
+    visibility: hidden;
+  }
 }
